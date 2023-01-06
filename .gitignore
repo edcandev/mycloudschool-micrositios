@@ -1,0 +1,4 @@
+# Ignorar los archivos de Mac
+.DS_store
+# Ignorar la carpeta de videos 
+/mcsiotrb/assets/videos/
