@@ -1,22 +1,15 @@
-
-/* self.addEventListener("message", function(oEvent) {
-    console.log("Mensaje enviado del main script" + oEvent.origin);
-    console.log(oEvent.data);
-}); */
-
-self.onmessage = function(oEvent) {
-
-    console.log(oEvent);
-    switch(oEvent.data) {
-        case 'watch_video':
-            watchVideoState();
-    }
-}
+addEventListener("message",(message)=> {
+    //console.log(message);
+    watchVideoState();
+    
+});
+/* onmessage = function(message) {
+    
+} */
 
 
 function watchVideoState() {
-
     setInterval(()=> {
-        console.log("jeej");
+        postMessage("");
     }, 1000);
 }

@@ -5,21 +5,20 @@ let slidesContainer = document.querySelectorAll('.slides-container');
 let previousSlideButton = document.querySelectorAll('.previous-slide');
 let nextSlideButton = document.querySelectorAll('.next-slide');
 
-let currentVideo = 'vid01'; // Comienza con el video 1
-
-const myWorker = new Worker('/js/video_listener.js');
-
+let currentVideoNumber = '';
+let currentVideo;
+const listenerWorker = new Worker('/js/video_listener.js');
 
 videoList.forEach(vid =>{
     vid.onclick = () => {
         
-        currentVideo = vid.classList[1];
-        
+        currentVideoNumber = vid.classList[1];
+        currentVideo = vid;
         slidesContainer = undefined;
         nextSlideButton = undefined;
         previousSlideButton = undefined;
         
-        contentList.forEach(remove => remove.classList.add('display-none'));
+        contentList.forEach(hide => hide.classList.add('display-none'));
         
         contentList.forEach(content => {
             if(content.classList.contains(vid.classList[1])) {
@@ -27,7 +26,7 @@ videoList.forEach(vid =>{
             }
         });
         
-        videoList.forEach(remove =>{remove.classList.remove('active')});
+        videoList.forEach(hide =>{hide.classList.remove('active')});
         vid.classList.add('active');
         let src = vid.querySelector('.list-video').src;
         let title = vid.querySelector('.list-title').innerHTML;
@@ -40,10 +39,41 @@ videoList.forEach(vid =>{
         previousSlideButton = document.querySelectorAll('.previous-slide');
         nextSlideButton = document.querySelectorAll('.next-slide');
 
-        myWorker.postMessage("watch_video",);
-
     };
 });
+
+const questionsTime = // Define los tiempos en los que cada pregunta es lanzada
+{
+    'vid01': {
+        'q01' : 5.0,         
+        'q02' : 10.0,        
+        'q03' : 15.0
+    },
+    'vid02': {
+        'q01' : 5.0,         
+        'q02' : 10.0,        
+        'q03' : 15.0
+    }
+}
+
+listenerWorker.postMessage("starting_worker");
+
+
+listenerWorker.onmessage = (message) => {
+    readCurrentTime();    
+}
+
+function readCurrentTime() {
+    if(currentVideoNumber !== "") {
+        const currentTime = document.querySelector('.main-video').currentTime; 
+        console.log(currentTime);
+
+
+        
+    }
+
+
+}
 
 
 
@@ -51,7 +81,7 @@ nextSlideButton.forEach((button, index)=> {
     
     button.addEventListener('click',()=> {
         
-        //const videoIndex = getVideoIndex(currentVideo);
+        //const videoIndex = getVideoIndex(currentVideoNumber);
         //console.log(parseInt(videoIndex()));
         
         const containerW = slidesContainer[index].clientWidth;
@@ -67,7 +97,7 @@ previousSlideButton.forEach((button, index)=> {
     
     button.addEventListener('click',()=> {
         
-        //const videoIndex = getVideoIndex(currentVideo);
+        //const videoIndex = getVideoIndex(currentVideoNumber);
         //console.log(parseInt(videoIndex()));
         
         const containerW = slidesContainer[index].clientWidth;
@@ -79,13 +109,7 @@ previousSlideButton.forEach((button, index)=> {
     });
 });
 
-function getVideoIndex(currentVideo) {
-    const number = currentVideo.substring(3,5);
+function getVideoIndex(currentVideoNumber) {
+    const number = currentVideoNumber.substring(3,5);
     return parseInt(number) - 1 ;
 }
-
-/* function videoListener() {
-    window.setInterval(()=> {
-        alert("TEST");
-    },3000)
-}; */
