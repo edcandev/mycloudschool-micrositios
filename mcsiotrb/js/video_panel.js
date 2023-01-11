@@ -6,12 +6,13 @@ let previousSlideButton = document.querySelectorAll('.previous-slide');
 let nextSlideButton = document.querySelectorAll('.next-slide');
 
 let currentVideoNumber = '';
+let selectedVideo = '';
 let currentVideo;
 const listenerWorker = new Worker('/js/video_listener.js');
 
 videoList.forEach(vid =>{
     vid.onclick = () => {
-        
+        videoState = 'play01'; 
         currentVideoNumber = vid.classList[1];
         currentVideo = vid;
         slidesContainer = undefined;
@@ -42,37 +43,39 @@ videoList.forEach(vid =>{
     };
 });
 
-const questionsTime = // Define los tiempos en los que cada pregunta es lanzada
-{
-    'vid01': {
-        q01 : {
-            time: 40.0,
-            correct: 'opc03'
-        },
-        q02 : {
-            time: 83.0,
-            correct: 'opc03'
-        },       
-        q03 : {
-            time: 100.0,
-            correct: 'opc03'
-        }       
+// Define los tiempos en los que cada pregunta es lanzada
+const questionsData = {
+    "vid01": {
+      "q01": {
+        time: 40.0,
+        correct: "opc03"
+      },
+      "q02": {
+        time: 123.0,
+        correct: "opc03"
+      },
+      "q03": {
+        time: 130.0,
+        correct: "opc03"
+      }
     },
-    'vid02': {
-        q01 : {
-            time: 40.0,
-            correct: 'opc03'
-        },
-        q02 : {
-            time: 83.0,
-            correct: 'opc03'
-        },       
-        q03 : {
-            time: 100.0,
-            correct: 'opc03'
-        }       
+    "vid02": {
+      "q01": {
+        time: 5.0,
+        correct: "opc03"
+      },
+      "q02": {
+        time: 10.0,
+        correct: "opc03"
+      },
+      "q03": {
+        time: 15.0,
+        correct: "opc03"
+      }
     }
 }
+  
+
 
 listenerWorker.postMessage("starting_worker");
 
@@ -86,42 +89,70 @@ let videoState = 'play01';
 function readCurrentTime() {
     if(currentVideoNumber !== "") {
 
-        const currentVideo = new SelectedVideo(document.querySelector('.main-video'));
-        console.log(currentVideo.questionData);
+        if(currentVideo != selectedVideo) {
+            videoState = 'play01';
+        }
 
-        const question01time = currentVideo.questionData.q01.time;
-        const question02time = currentVideo.questionData.q02.time;
-        const question03time = currentVideo.questionData.q03.time;
+        selectedVideo = document.querySelector('.active');
+        const mainVideo = new MainVideo(document.querySelector('.main-video'));
+        //console.info(`Video seleccionado:`);
+        //console.info(selectedVideo);
+        //console.info(`Video actual:`);
+        //console.info(currentVideo);
 
-        if(currentVideo.currentTime > question01time && videoState == 'play01') {
+        
+        
+        console.info(videoState);
+
+        const question01time = mainVideo.questionData.q01.time;
+        const question02time = mainVideo.questionData.q02.time;
+        const question03time = mainVideo.questionData.q03.time;
+
+        if(mainVideo.currentTime > question01time && videoState == 'play01') {
+            console.log("PRIMERA PAUSA");
             videoState = 'paused01';
-            currentVideo.pause();
-            //currentVideo.videoState = 'paused01';
+            mainVideo.pause();
+            //mainVideo.videoState = 'paused01';
         }
         
-        if(currentVideo.currentTime > question01time && SelectedVideo.videoState == 'paused01') {
+        if(mainVideo.currentTime > question01time && videoState == 'paused01') {
+            //console.log("en la primera pausa");
             document.querySelector('.main-video').onplay = function () {
-                console.log("jejej");
-                currentVideo.videoState = 'play02';
+                videoState = 'play02';  
             }
-        
         }
-        if(currentVideo.currentTime > question02time && SelectedVideo.videoState == 'play02') {
-            currentVideo.videoState = 'paused01';
-            currentVideo.pause();
-            //currentVideo.videoState = 'paused01';
+
+        if(mainVideo.currentTime > question02time && videoState == 'play02') {
+            console.log("SEGUNDA PAUSA");
+            videoState = 'paused02';
+            mainVideo.pause();
+            //mainVideo.videoState = 'paused01';
         }
-        
-        
-        //const currentTime = document.querySelector('.main-video').currentTime; 
-        //console.log(currentVideo.currentTime);
 
+        if(mainVideo.currentTime > question02time && videoState == 'paused02') {
+            //console.log("en la segunda pausa");
+            document.querySelector('.main-video').onplay = function () {
+                videoState = 'play03';  
+            }
+        }
 
-        
+        if(mainVideo.currentTime > question03time && videoState == 'play03') {
+            console.log("TERCERA PAUSA");
+            videoState = 'paused03';
+            mainVideo.pause();
+            //mainVideo.videoState = 'paused01';
+        }
+
+        if(mainVideo.currentTime > question03time && videoState == 'paused03') {
+            //console.log("en la tercera pausa");
+            document.querySelector('.main-video').onplay = function () {
+                videoState = 'play04';  
+            }
+        }
     }
 }
 
-class SelectedVideo {
+class MainVideo {
 
     constructor(HTMLElement) {
         this.src = HTMLElement.src;
@@ -141,7 +172,7 @@ class SelectedVideo {
         const videoNumber = vids.find((e)=> {
             return this.src.includes(e);
         });
-        return questionsTime[videoNumber];
+        return questionsData[videoNumber];
     }
 }
 nextSlideButton.forEach((button, index)=> {
