@@ -5,7 +5,7 @@
 }
 header{
     text-align: center;
-    background: rgb(239, 87, 5);
+    background: #FF6600;
     color: #fff;
     padding: 10px 0;
 }
@@ -15,7 +15,7 @@ header{
     padding: 20px;
 }
 section{
-    border: 2px solid #0386f8;
+    border: 2px solid #007bff;
     border-radius: 7px;
     padding: 10px;
     margin: 10px 0;
@@ -30,7 +30,7 @@ label{
     margin-bottom: 3px;
 }
 label:hover{
-    background: #ceed1f;
+    background: #007bff;
 }
 button{
     width: 80%;
@@ -38,7 +38,7 @@ button{
     margin: auto;
     padding: 10px;
 
-    background-color: #76d7c8;
+    background-color: #FF6600;
     border: none;
     cursor: pointer;
     border-radius: 20px;
