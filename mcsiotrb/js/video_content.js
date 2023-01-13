@@ -3,7 +3,7 @@ const languageOptions = document.querySelectorAll('.select-language-option');
 const languageConts = document.querySelectorAll('.language-cont');
 
 
-selectLanguage.addEventListener('click', ()=> {
+/* selectLanguage.addEventListener('click', ()=> {
     console.log(selectLanguage.value);
 
     languageConts.forEach(e => {
@@ -14,4 +14,4 @@ selectLanguage.addEventListener('click', ()=> {
         }
     });
 });
-
+ */

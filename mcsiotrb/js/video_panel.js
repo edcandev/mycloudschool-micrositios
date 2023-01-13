@@ -8,6 +8,8 @@ let nextSlideButton = document.querySelectorAll('.next-slide');
 let currentVideoNumber = '';
 let selectedVideo = '';
 let currentVideo;
+let videoState = 'play01';
+
 const listenerWorker = new Worker('/js/video_listener.js');
 
 videoList.forEach(vid =>{
@@ -77,14 +79,19 @@ const questionsData = {
   
 
 
-listenerWorker.postMessage("starting_worker");
+// listenerWorker.postMessage("starting_worker"); 
+/*
+postMessage permite gestioanr el envío de mensaje hacia y desde el WebWorker.
+Sino es llamados
+
+*/
+
 
 
 listenerWorker.onmessage = (message) => {
     readCurrentTime();    
 }
 
-let videoState = 'play01';
 
 function readCurrentTime() {
     if(currentVideoNumber !== "") {
