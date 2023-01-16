@@ -2,3 +2,5 @@
 .DS_store
 # Ignorar la carpeta de videos 
 /mcsiotrb/assets/videos/
+/mcsiotrb/assets/audios/
+.vscode/
