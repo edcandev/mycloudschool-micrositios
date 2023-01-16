@@ -1,5 +1,5 @@
 //arreglo que contiene las respuestas correctas
-let correctas = [3,1,2,2,3];
+let correctas = [4,3,1];
 
 // arreglo donde se guardan las respuestas del usuario
 let opcion_elegido=[];
@@ -33,4 +33,5 @@ function corregir(){
             cantidad_correctas++;
         }
     }
+    document.getElementById("resultado").innerHTML = cantidad_correctas;
 }
