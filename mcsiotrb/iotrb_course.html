@@ -77,8 +77,13 @@
             </div>
         </div>
         <div style="width:100%;">
-            <h4> ANTEDECEDENTES </h4>
+            CICK AQUÍ PARA MOSTRAR LOS 
+            <input type="button" onclick="openNav()" value="ANTEDECEDENTES">
         </div>
+
+        <div  id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">cerrar</a>
+
 
             <div class="vid video-content vid01 width-100"> <!-- Podcast Video 1-->
                 <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
@@ -90,40 +95,37 @@
                 <audio controls>
                     <source preload="auto" src="assets/audios/vid01/MCSIOTRB_vid01_pod02.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 3</p>
-                <audio controls>
-                    <source preload="auto" src="assets/audios/vid01/MCSIOTRB_vid01_pod03.mp3" id="iframeAudio">
-                </audio>
             </div>
+
             <div class="vid video-content vid02 width-100 display-none"> <!-- Podcast Video 2-->
                 <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
                 <p>El impacto del IoT en la vida cotidiana.</p>
                 <audio controls>
                     <source preload="auto" src="assets/audios/vid02/MCSIOTRB_vid02_pod01.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 2</p>
+                <p>Internet de las cosas en salud</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid02/MCSIOTRB_vid02_pod02.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid02/MCS_IOTRB_vid02_pod2.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 3</p>
+                <p>Smart Retail</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid02/MCSIOTRB id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid02/MCS_IOTRB_vid02_pod3.mp3" id="iframeAudio">
                 </audio>
             </div>
 
             <div class="vid video-content vid03 width-100 display-none"> <!-- Podcast Video 3-->
                 <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
-                <p> Podcast 1</p>
+                <p>¿Qué es Microsoft Azure?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid03/MCSIOTRB_vid03_pod01.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod1.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 2</p>
+                <p>¿Qué es Azure IoT Hub?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid03/MCSIOTRB_vid03_pod02.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod2.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 3</p>
+                <p>¿Qué es Azure IoT Edge?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid03/MCSIOTRB_vid03_pod03.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod3.mp3" id="iframeAudio">
                 </audio>
             </div>
 
@@ -154,19 +156,20 @@
                     <source preload="auto" src="assets/audios/vid05/MCS_IOTRB_vid05_pod02.mp3" id="iframeAudio">
                 </audio>
             </div>
+
             <div class="vid video-content vid06 width-100 display-none"> <!-- Podcast Video 6-->
                 <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
-                <p> Podcast 1</p>
+                <p>¿Qué es el Protocolo I2E?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid06/MCSIOTRB_vid06_pod01.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid06/MCS_IOTRB_vid06_pod01.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 2</p>
+                <p>¿Qué es el Protocolo SSH?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid06/MCSIOTRB_vid06_pod02.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid06/MCS_IOTRB_vid06_pod02.mp3" id="iframeAudio">
                 </audio>
-                <p> Podcast 3</p>
+                <p>Usos del Protocolo SSH.</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid06/MCSIOTRB_vid06_pod03.mp3" id="iframeAudio">
+                    <source preload="auto" src="assets/audios/vid06/MCS_IOTRB_vid06_pod03.mp3" id="iframeAudio">
                 </audio>
             </div>
 
@@ -220,35 +223,43 @@
 
             <div class="vid video-content vid10 width-100 display-none"> <!-- Podcast Video 10-->
                 <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
-                <p>pod1</p>
+                <p>¿Qué es Azure IoT Hub?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid10/MCSIOTRB_vid10_pod01.mp3" id="iframeAudio">
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod01.mp3" id="iframeAudio">
                 </audio>
-                <p>¿pod2</p>
+                <p>¿Qué es el Cloud Shell de Azure?</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid10/MCSIOTRB_vid10_pod02.mp3" id="iframeAudio">
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod02.mp3" id="iframeAudio">
                 </audio>
-                <p>pod3</p>
+                <p>¿Qué es una cadena de conexión</p>
                 <audio controls>
-                    <source preload="auto" src="assets/audios/vid10/MCSIOTRB_vid10_pod03.mp3" id="iframeAudio">
-                </audio>
-            </div>
-            <div class="vid video-content vid11 width-100 display-none"> <!-- Podcast Video 11-->
-                <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
-                <p>pod1</p>
-                <audio controls>
-                    <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod01.mp3" id="iframeAudio">
-                </audio>
-                <p>pod2</p>
-                <audio controls>
-                    <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod02.mp3" id="iframeAudio">
-                </audio>
-                <p>pod3</p>
-                <audio controls>
-                    <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod03.mp3" id="iframeAudio">
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod03.mp3" id="iframeAudio">
                 </audio>
             </div>
-        
+                <div class="vid video-content vid11 width-100 display-none"> <!-- Podcast Video 11-->
+                    <h4>Para continuar con este video, deberás conocer los siguientes conceptos...</h4>
+                    <p>pod1</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod01.mp3" id="iframeAudio">
+                    </audio>
+                    <p>pod2</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod02.mp3" id="iframeAudio">
+                    </audio>
+                    <p>pod3</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod03.mp3"   id="iframeAudio">
+                    </audio>
+                </div>
+            </div>
+            <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "50%";
+            }/* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
 
     <!-- About End -->
         <div class="main-video-container">
