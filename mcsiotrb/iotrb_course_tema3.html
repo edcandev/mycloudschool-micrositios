@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Internet of Things - My Cloud School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="iot mycloudschool cursos" name="keywords">
+    <meta content="Internet" name="description">
+    <link rel="icon" href="img/favicon.png">    <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"><!-- Font Awesome -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/video-panel.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/video_panel.js"></script>
+    <script defer src="js/video_content.js"></script>
+    <script defer src="js/sidenav.js"></script>
+</head>
+</head>
+
+<body>
+	<!-- Topbar Start -->
+	<header class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+			<div class="col-lg-3">
+
+                <a href="index.html" class="text-decoration-none d-flex">
+                    <h1 class="m-0 align-self-center"><span class="text-primary">My</span>CloudSchool</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+            	<div class="d-inline-flex align-items-center">
+            		<i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+            		<div class="text-left">
+            			<h6 class="font-weight-semi-bold mb-1">Ubicación</h6>
+            			<small>CDMX</small>
+        			</div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Email</h6>
+                            <small>mycloudschool@</small>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+						<h6 class="font-weight-semi-bold mb-1">Telefono:</h6>
+						<small>5513345224</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Topbar End -->
+
+
+    <div class="container m-auto m-0">
+    <!-- About Start -->
+        <div class="container-fluid pt-4">
+            <div class="container py-0 m-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="text-center mb-4">
+                            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Internet of Things</h5>
+                            <h1>Estación Climatológica con Raspberry Pi y Azure IoT Hub</h1>
+                        </div>
+                        <p class="text-justify">En este curso, se explicarán desde cero los fundamentos del Internet de las Cosas (IoT). Abarcaremos conceptos básicos, definiciones y se explicará el funcionamiento de estas tecnologías.</p>
+                        <p class="text-justify">Además, los expositores presentarán un ejemplo práctico sobre el funcionamiento del IoT, donde fabricarán una estación climatológica utilizando el sensor de presión barométrica <b>BMP280</b>, la mini computadora <b>Raspberry Pi 3</b> y el servicio en la nube <b>Azure IoT Hub</b>, para monitorear los datos entrantes, que serán capturados utilizando <b>Python3</b> y la plataforma de desarrollo <b>.NET.</b> Finalmente, utilizando <b>Node.js</b> y <b>Docker</b>, desarrollarán una WebApp donde podremos ver los cambios de temperatura en tiempo real.
+                        </p>
+                    </div>
+                </div>
+                    <button id="open-nav" style="width: 100%;" onclick="openNav()">>> Antecedentes Necesarios <<</button>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="ml-3 d-inline-block">
+                <h4 class="d-inline" style="width: 65%; color:#000; font-weight: bolder; font-size: 1.75em;
+                    ">ANTECEDENTES</h4>
+                <a style="width: 25%;" href="javascript:void(0)" id="close-nav" onclick="closeNav()">&#215</a>
+            </div>
+
+
+
+            <div class="podcast-cont vid video-content vid07 width-100"> <!-- Podcast Video 7-->
+                
+                <p>¿Qué es Bash?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid07/MCSIOTRB_vid07_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es un SDK?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid07/MCSIOTRB_vid07_pod02.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué son las variables de entorno?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid07/MCSIOTRB_vid07_pod03.mp3" id="iframeAudio">
+                </audio>
+            </div>
+
+            <div class="podcast-cont vid video-content vid08 width-100 display-none"> <!-- Podcast Video 8-->
+                
+                <p>¿Qué es Python?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid08/MCSIOTRB_vid08_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es un gestor de paquetes?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid08/MCSIOTRB_vid08_pod02.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es PiP?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid08/MCSIOTRB_vid08_pod03.mp3" id="iframeAudio">
+                </audio>
+            </div>
+   
+            <div class="podcast-cont vid video-content vid09 width-100 display-none"> <!-- Podcast Video 9-->
+                
+                <p>¿Qué es .NET?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid09/MCSIOTRB_vid09_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es un gestor de paquetes?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid09/MCSIOTRB_vid09_pod02.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es NuGet?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid09/MCSIOTRB_vid09_pod03.mp3" id="iframeAudio">
+                </audio>
+            </div>
+        </div>
+    <!-- About End -->
+        <div class="main-video-container">
+            <video src="videos/MCS_IOTRB_vid07.mp4" controls poster="assets/slides/vid07/MCS_IOTRB_vid07_sli01.jpg" preload="auto" class="main-video"></video>
+            <h2 class="main-vid-title font-size-1em">Configurando el entorno de desarrollo en la Raspberry</h2>
+        </div>
+
+        
+        <div class="video-list-container">
+            
+            <div class="list vid07 active">
+                <video src="assets/videos/MCS_IOTRB_vid07.mp4" class="list-video"></video>
+                <h2 class="list-title">Configurando el entorno de desarrollo en la Raspberry</h2>
+            </div>
+
+            <div class="list vid08">
+                <video src="assets/videos/MCS_IOTRB_vid08.mp4" class="list-video"></video>
+                <h2 class="list-title">Capturando datos del sensor con Python</h2>
+            </div>
+
+            <div class="list vid09">
+                <video src="assets/videos/MCS_IOTRB_vid09.mp4" class="list-video"></video>
+                <h2 class="list-title">Capturando datos del sensor con .NET</h2>
+            </div>
+        </div>
+<!-- Contenido por video -->
+    <div class="container m-auto m-0 pt-5">
+
+        <div class="d-flex width-100 justify-content-around font-size-1-5em">
+            <a href="iotrb_course_tema2.html">Tema Anterior</a>
+            <a href="iotrb_course_tema4.html">Tema Siguiente</a>
+        </div>
+
+        
+        <div class="vid video-content vid07 width-100">
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 7</h2>
+            <div> <!-- Presentación No. 7-->
+                <h4>Contenido del Video</h4>
+                <div class="width-100 d-flex overflow-hidden slides-container ">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli01.jpg" class="width-100">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli02.jpg" class="width-100">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli03.jpg" class="width-100">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli04.jpg" class="width-100">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli05.jpg" class="width-100">
+                    <img src="assets/slides/vid07/MCS_IOTRB_vid07_sli06.jpg" class="width-100">
+                </div>
+                <div class="width-100 d-flex justify-content-between p-5">
+                    <button style="border-radius: 25px;" class="previous-slide d-inline-block width-20 ar-4-1">	&#60;</button>
+                    <button style="border-radius: 25px;" class="next-slide d-inline-block width-20 ar-4-1">&#62;</button>
+                </div>
+            </div><!-- Presentación No. 7-->
+        </div>
+
+        <div class="vid video-content vid08 width-100 display-none">
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 8</h2>
+            <div> <!-- Presentación No. 8-->
+            </div><!-- Presentación No. 8-->
+            <div class="width-100">
+                <h4>Pasos a Seguir</h4>
+                <p>Una vez instalados los SDKs en nuestra Raspberry, podemos comenzar con el desarrollo de las aplicaciones que nos permitan capturar los datos del sensor hacia la consola.</p>
+
+                <div class="language-cont python active text-center">
+                    <p class="text-left">El primer paso es crear un directorio en la carpeta home (~) de nuestra Raspberry con el nombre "python", utilizaremos el siguiente comando:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">mkdir python</code>
+                    <p class="text-left">Dentro del directorio creado, descargaremos los módulos necesarios para la ejecución del programa, para esto, utilizaremos el siguiente comando:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">pip install adafruit-circuitpython-bmp280</code>
+                    <p class="text-left">Crearemos nuestro script, lo llamaremos "sensor.py". Utilizaremos los siguientes comandos:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">cd python</code>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">nano sensor.py</code>
+                    
+                    <p class="text-left">Nos dirigimos al fichero creado y pegamos el siguiente código:</p>
+                    <code class="text-trans-none width-50 d-inline-block font-weight-bolder mb-3 text-left">
+                        import board<br>
+                        import busio<br>
+                        import adafruit_bmp280<br>
+                        import time<br>
+                        i2c = busio.I2C(board.SCL, board.SDA)<br>
+                        # Cuando el SDO (SDA) esta Grounded, podemos seleccionar la dirección 0x76<br>
+                        sensor = adafruit_bmp280.Adafruit_BMP280_I2C(i2c, address = 0x76)<br>
+                        while True:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Temperatura: " + str(sensor.temperature) + " Cº")<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Presión: " + str(sensor.pressure))<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)
+                    </code>
+                    <p class="text-left">Una vez guardado el fichero, podemos ejecutar el programa que captura la temperatura hacia la consola. Utilizaremos el siguiente comando:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">python sensor.py</code>
+                    <img class="mb-3" src="assets/slides/vid08/MCS_IOTRB_vid08_sli01.jpg" title="¡Los datos son capturados!">
+                    <p class="text-left">Como podemos apreciar, los datos son capturados de manera satifactoria. En el siguiente video, estos datos serán enviados a Azure IoT Hub.</p>
+                </div>
+            </div>
+        </div> <!-- Contenido Video 8 -->
+
+        <div class="vid video-content vid09 width-100 display-none">
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 9</h2>
+            <div> <!-- Presentación No. 8-->
+            </div><!-- Presentación No. 8-->
+            <div class="width-100">
+                <h4>Pasos a Seguir</h4>
+                <p>Una vez instalados los SDKs en nuestra Raspberry, podemos comenzar con el desarrollo de las aplicaciones que nos permitan capturar los datos del sensor hacia la consola.</p>
+
+                <div class="language-cont dotnet text-center">
+                    <p class="text-left">El primer paso es crear un directorio en la carpeta home (~) de nuestra Raspberry con el nombre "dotnet", utilizaremos el siguiente comando:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">mkdir dotnet</code>
+                    <p class="text-left">Una vez hemos creado el directorio, vamos a crear una nueva aplicación de tipo: consola. Utilizaremos el siguiente comando, es imporante notar que éste tiene como parámetro adicional <b>-o</b> que nos permite definir una ruta para la creación del proyecto, en este caso, elegiremos el directorio creado anteriormente.</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">mkdir dotnet</code>
+                    <p class="text-left">Posteriormente, nos dirigimos al directorio e instalamos las dependencias necesarias para su ejecución. La plataforma .NET utiliza el gestor de paquetes NuGet.</p>
+                    <p class="text-left">Para instalar las dependencias, utilizaremos los siguientes comandos:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">dotnet add package Iot.Device.Bindings --version 2.1.0</code>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">dotnet add package UnitsNet --version 4.149.0</code>
+                    <p class="text-left">El primer paquete nos permite trabajar con las conexiones físicas y los pines GPIO de nuestra Raspberry, el segundo paquete nos permite trabajar con un sistema de unidades más poreciso para la captura de los datos del sensor.</p>
+                    <p class="text-left">Dentro del directorio, modificaremos el archivo "Program.cs" copiando el siguiente código y sustituyéndolo dentro del fichero.</p>
+                    <code class="text-trans-none width-50 d-inline-block font-weight-bolder mb-3 text-left">
+                        using System;<br>
+                        using System.Device.I2c;<br>
+                        using System.Threading;<br>
+                        using Iot.Device.Bmxx80;<br>
+                        using Iot.Device.Bmxx80.FilteringMode;<br>
+                        using Iot.Device.Common;<br>
+                        using UnitsNet;<br>
+                        using System.Text;<br>
+                        double temperatureDouble;<br>
+                        double pressureDouble;<br>
+                        const int busId = 1;<br>
+                        Pressure defaultSeaLevelPressure = WeatherHelper.MeanSeaLevel;<br>
+                        I2cConnectionSettings i2cSettings = new(busId, 118);<br>
+                        I2cDevice i2cDevice = I2cDevice.Create(i2cSettings);<br>
+                        var i2CBmp280 = new Bmp280(i2cDevice);<br>
+                        while (true) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;i2CBmp280.TemperatureSampling = Sampling.UltraHighResolution;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;i2CBmp280.PressureSampling = Sampling.UltraHighResolution;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;i2CBmp280.FilterMode = Bmx280FilteringMode.X4;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var readResult = i2CBmp280.Read();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;readResult = await i2CBmp280.ReadAsync();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;temperatureDouble = (double)readResult.Temperature?.DegreesCelsius;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;pressureDouble = (double)readResult.Pressure?.Hectopascals;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("La temperatura es: " + temperatureDouble);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("La presión es: " + pressureDouble);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Thread.Sleep(2000);<br>
+                        }
+                    </code>
+                    <p class="text-left">Una vez copiado el código dentro del fichero, podemos ejecutar el programa utilizando el siguiente comando:</p>
+                    <code class="text-trans-none width-100 d-block text-center font-weight-bolder mb-3">dotnet run</code>
+                    <img class="mb-3" src="assets/slides/vid08/MCS_IOTRB_vid08_sli02.jpg" title="¡Los datos son capturados!">
+                    <p class="text-left">Como podemos apreciar, los datos son enviados correctamente.</p>
+                </div> 
+            </div>
+        </div> <!-- Contenido Video 9 -->
+
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
