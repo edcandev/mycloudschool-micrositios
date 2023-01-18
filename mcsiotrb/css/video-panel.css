@@ -136,4 +136,8 @@
       margin-bottom: 0px;
    }
 
+   #ante_icon {
+      display: none;
+   }
+
 }
