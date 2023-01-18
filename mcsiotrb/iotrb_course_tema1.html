@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Internet of Things - My Cloud School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="iot mycloudschool cursos" name="keywords">
+    <meta content="Internet" name="description">
+    <link rel="icon" href="img/favicon.png">    <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"><!-- Font Awesome -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/video-panel.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/video_panel.js"></script>
+    <script defer src="js/video_content.js"></script>
+    <script defer src="js/sidenav.js"></script>
+</head>
+</head>
+
+<body>
+	<!-- Topbar Start -->
+	<header class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+			<div class="col-lg-3">
+
+                <a href="index.html" class="text-decoration-none d-flex">
+                    <h1 class="m-0 align-self-center"><span class="text-primary">My</span>CloudSchool</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+            	<div class="d-inline-flex align-items-center">
+            		<i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+            		<div class="text-left">
+            			<h6 class="font-weight-semi-bold mb-1">Ubicación</h6>
+            			<small>CDMX</small>
+        			</div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Email</h6>
+                            <small>mycloudschool@</small>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+						<h6 class="font-weight-semi-bold mb-1">Telefono:</h6>
+						<small>5513345224</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Topbar End -->
+
+
+    <div class="container m-auto m-0">
+    <!-- About Start -->
+        <div class="container-fluid pt-4">
+            <div class="container py-0 m-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="text-center mb-4">
+                            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Internet of Things</h5>
+                            <h1>Estación Climatológica con Raspberry Pi y Azure IoT Hub</h1>
+                        </div>
+                        <p class="text-justify">En este curso, se explicarán desde cero los fundamentos del Internet de las Cosas (IoT). Abarcaremos conceptos básicos, definiciones y se explicará el funcionamiento de estas tecnologías.</p>
+                        <p class="text-justify">Además, los expositores presentarán un ejemplo práctico sobre el funcionamiento del IoT, donde fabricarán una estación climatológica utilizando el sensor de presión barométrica <b>BMP280</b>, la mini computadora <b>Raspberry Pi 3</b> y el servicio en la nube <b>Azure IoT Hub</b>, para monitorear los datos entrantes, que serán capturados utilizando <b>Python3</b> y la plataforma de desarrollo <b>.NET.</b> Finalmente, utilizando <b>Node.js</b> y <b>Docker</b>, desarrollarán una WebApp donde podremos ver los cambios de temperatura en tiempo real.
+                        </p>
+                    </div>
+                </div>
+                    <button id="open-nav" style="width: 100%;" onclick="openNav()">>> Antecedentes Necesarios <<</button>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="ml-3 d-inline-block">
+                <h4 class="d-inline" style="width: 65%; color:#000; font-weight: bolder; font-size: 1.75em;
+                    ">ANTECEDENTES</h4>
+                <a style="width: 25%;" href="javascript:void(0)" id="close-nav" onclick="closeNav()">&#215</a>
+            </div>
+
+
+            <div class="podcast-cont vid video-content vid01"> <!-- Podcast Video 1-->
+                <p>¿Qué es el IoT?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid01/MCSIOTRB_vid01_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es un dispositivo inteligente?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid01/MCSIOTRB_vid01_pod02.mp3" id="iframeAudio">
+                </audio>
+            </div>
+
+            <div class="podcast-cont vid video-content vid02 display-none"> <!-- Podcast Video 2-->
+                <h4></h4>
+                <p>El impacto del IoT en la vida cotidiana.</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid02/MCSIOTRB_vid02_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>Internet de las cosas en salud</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid02/MCS_IOTRB_vid02_pod2.mp3" id="iframeAudio">
+                </audio>
+                <p>Smart Retail</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid02/MCS_IOTRB_vid02_pod3.mp3" id="iframeAudio">
+                </audio>
+            </div>
+
+            <div class="podcast-cont vid video-content vid03 width-100 display-none"> <!-- Podcast Video 3-->
+                
+                <p>¿Qué es Microsoft Azure?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod1.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es Azure IoT Hub?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod2.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es Azure IoT Edge?</p>
+                <audio controls>
+                    <source preload="auto" src="assets/audios/vid03/MCS_IOTRB_vid03_pod3.mp3" id="iframeAudio">
+                </audio>
+            </div>
+
+        </div>
+
+    <!-- About End -->
+        <div class="main-video-container">
+            <video src="videos/MCS_IOTRB_vid01.mp4" controls poster="assets/slides/vid01/MCS_IOTRB_vid01_sli01.jpg" preload="auto" class="main-video"></video>
+            <h2 class="main-vid-title font-size-1em">Conceptos Generales Del IoT</h2>
+        </div>
+        
+        <div class="video-list-container">
+            <div class="list active vid01">
+                <video src="assets/videos/MCS_IOTRB_vid01.mp4" class="list-video"></video>
+                <h2 class="list-title">Conceptos Generales del IoT</h2>
+            </div>
+            <div class="list vid02">
+                <video src="assets/videos/MCS_IOTRB_vid02.mp4" class="list-video"></video>
+                <h2 class="list-title">Aplicaciones del IoT en la vida cotidiana</h2>
+            </div>
+            <div class="list vid03">
+	    	    <video src="assets/videos/MCS_IOTRB_vid03.mp4" class="list-video"></video>
+		        <h2 class="list-title">Servicios de IoT en Microsoft Azure</h2>
+            </div>
+        </div>
+
+<!-- Contenido por video -->
+    <div class="container m-auto m-0">
+        
+        <div class="d-flex width-100 justify-content-around font-size-1-5em">
+            <a href="#">Tema Anterior</a>
+            <a href="iotrb_course_tema2.html">Tema Siguiente</a>
+        </div>
+        <div class="vid video-content vid01 width-100"> <!-- Contenido Video 1 -->
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 1</h2>
+            <div> <!-- Presentación No. 1-->
+                <h4>Contenido del Video</h4>
+                <div class="width-100 d-flex overflow-hidden slides-container ">
+                    <img src="assets/slides/vid01/MCS_IOTRB_vid01_sli01.jpg" class="width-100">
+                    <img src="assets/slides/vid01/MCS_IOTRB_vid01_sli02.jpg" class="width-100">
+                    <img src="assets/slides/vid01/MCS_IOTRB_vid01_sli03.jpg" class="width-100">
+                </div>
+                <div class="width-100 d-flex justify-content-between p-5">
+                    <button style="border-radius: 25px;" class="previous-slide d-inline-block width-20 ar-4-1">	&#60;</button>
+                    <button style="border-radius: 25px;" class="next-slide d-inline-block width-20 ar-4-1">&#62;</button>
+                </div>
+            </div> <!-- Presentación No. 1-->
+
+
+            <article>
+                <article>
+
+                    <h4> Mas alla del IoT</h4>
+            
+                    <p> Si buscan un concepto mas abstracto sobre que es el IoT, no habra un solo cocepto, el Internet of Things (IoT) es un sistema de dispositivos informáticos interrelacionados, máquinas mecánicas y digitales, objetos, animales o personas que están provistos de identificadores únicos y la capacidad de transferir datos a través de una red sin necesidad de interacción entre personas o entre personas y computadoras</p>
+            
+                    <h4> Importancia del IoT</h4>
+            
+                    <p> El Interter a cada dia esta en incremento muy rápidamente. Y lo que hasta hace solo unos años era ciencia ficción, ya es una realidad gracias al IoT.
+            </article>
+
+        </div> <!-- Contenido Video 1 -->
+    
+        <div class="vid video-content vid02 width-100 display-none">
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 2 </h2>
+            <div> <!-- Presentación No. 2-->
+                <h4>Contenido del Video</h4>
+                <div class="width-100 d-flex overflow-hidden slides-container ">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli01.jpg"class="width-100">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli02.jpg"class="width-100">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli03.jpg"class="width-100">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli04.jpg"class="width-100">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli05.jpg"class="width-100">
+                    <img src="assets/slides/vid02/MCS_IOTRB_vid02_sli06.jpg"class="width-100">
+                </div>
+                <div class="width-100 d-flex justify-content-between p-5">
+                    <button style="border-radius: 25px;" class="previous-slide d-inline-block width-20 ar-4-1">	&#60;</ button>
+                    <button style="border-radius: 25px;" class="next-slide d-inline-block width-20 ar-4-1">&#62;</button>
+                </div>
+            </div> <!-- Presentación No. 2-->
+        </div> <!-- Contenido Video 2 -->
+        
+        <div class="vid video-content vid03 width-100 display-none">
+            <h2 class="mb-3 text-center">RECURSOS VIDEO 3</h2>
+            <div> <!-- Presentación No. 3-->
+                <h4>Contenido del Video</h4>
+                <div class="width-100 d-flex overflow-hidden slides-container ">
+                    <img src="assets/slides/vid03/MCS_IOTRB_vid03_sli01.jpg" class="width-100">
+                    <img src="assets/slides/vid03/MCS_IOTRB_vid03_sli02.jpg" class="width-100">
+                    <img src="assets/slides/vid03/MCS_IOTRB_vid03_sli03.jpg" class="width-100">
+                    <img src="assets/slides/vid03/MCS_IOTRB_vid03_sli04.jpg" class="width-100">
+                    <img src="assets/slides/vid03/MCS_IOTRB_vid03_sli05.jpg" class="width-100">
+                </div>
+                <div class="width-100 d-flex justify-content-between p-5">
+                    <button style="border-radius: 25px;" class="previous-slide d-inline-block width-20 ar-4-1">	&#60;</button>
+                    <button style="border-radius: 25px;" class="next-slide d-inline-block width-20 ar-4-1">&#62;</button>
+                </div>
+            </div><!-- Presentación No. 3-->
+        </div> <!-- Contenido Video 3 -->
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>

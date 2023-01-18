@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Internet of Things - My Cloud School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="iot mycloudschool cursos" name="keywords">
+    <meta content="Internet" name="description">
+    <link rel="icon" href="img/favicon.png">    <!-- Favicon -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"><!-- Font Awesome -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/video-panel.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/video_panel.js"></script>
+    <script defer src="js/video_content.js"></script>
+    <script defer src="js/sidenav.js"></script>
+</head>
+</head>
+
+<body>
+	<!-- Topbar Start -->
+	<header class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+			<div class="col-lg-3">
+
+                <a href="index.html" class="text-decoration-none d-flex">
+                    <h1 class="m-0 align-self-center"><span class="text-primary">My</span>CloudSchool</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+            	<div class="d-inline-flex align-items-center">
+            		<i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+            		<div class="text-left">
+            			<h6 class="font-weight-semi-bold mb-1">Ubicación</h6>
+            			<small>CDMX</small>
+        			</div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                        <div class="text-left">
+                            <h6 class="font-weight-semi-bold mb-1">Email</h6>
+                            <small>mycloudschool@</small>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+						<h6 class="font-weight-semi-bold mb-1">Telefono:</h6>
+						<small>5513345224</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Topbar End -->
+
+
+    <div class="container m-auto m-0">
+    <!-- About Start -->
+        <div class="container-fluid pt-4">
+            <div class="container py-0 m-0">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="text-center mb-4">
+                            <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Internet of Things</h5>
+                            <h1>Estación Climatológica con Raspberry Pi y Azure IoT Hub</h1>
+                        </div>
+                        <p class="text-justify">En este curso, se explicarán desde cero los fundamentos del Internet de las Cosas (IoT). Abarcaremos conceptos básicos, definiciones y se explicará el funcionamiento de estas tecnologías.</p>
+                        <p class="text-justify">Además, los expositores presentarán un ejemplo práctico sobre el funcionamiento del IoT, donde fabricarán una estación climatológica utilizando el sensor de presión barométrica <b>BMP280</b>, la mini computadora <b>Raspberry Pi 3</b> y el servicio en la nube <b>Azure IoT Hub</b>, para monitorear los datos entrantes, que serán capturados utilizando <b>Python3</b> y la plataforma de desarrollo <b>.NET.</b> Finalmente, utilizando <b>Node.js</b> y <b>Docker</b>, desarrollarán una WebApp donde podremos ver los cambios de temperatura en tiempo real.
+                        </p>
+                    </div>
+                </div>
+                    <button id="open-nav" style="width: 100%;" onclick="openNav()">>> Antecedentes Necesarios <<</button>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="ml-3 d-inline-block">
+                <h4 class="d-inline" style="width: 65%; color:#000; font-weight: bolder; font-size: 1.75em;
+                    ">ANTECEDENTES</h4>
+                <a style="width: 25%;" href="javascript:void(0)" id="close-nav" onclick="closeNav()">&#215</a>
+            </div>
+
+            <div class="podcast-cont vid video-content vid10 width-100"> <!-- Podcast Video 10-->
+                
+                <p>¿Qué es Azure IoT Hub?</p>
+                <audio controls>
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod01.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es el Cloud Shell de Azure?</p>
+                <audio controls>
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod02.mp3" id="iframeAudio">
+                </audio>
+                <p>¿Qué es una cadena de conexión</p>
+                <audio controls>
+                    <source preload="none" src="assets/audios/vid10/MCSIOTRB_vid10_pod03.mp3" id="iframeAudio">
+                </audio>
+            </div>
+
+            <div class="podcast-cont vid video-content vid11 width-100 display-none"> <!-- Podcast Video 11-->        
+                    <p>¿Qué es una WebApp?</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod01.mp3" id="iframeAudio">
+                    </audio>
+                    <p>¿Qué es Node.js?</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod02.mp3" id="iframeAudio">
+                    </audio>
+                    <p>¿Qué es Docker?</p>
+                    <audio controls>
+                        <source preload="auto" src="assets/audios/vid11/MCSIOTRB_vid11_pod03.mp3"   id="iframeAudio">
+                    </audio>
+            </div>
+        </div>
+    <!-- About End -->
+        <div class="main-video-container">
+            <video src="videos/MCS_IOTRB_vid10.mp4" controls preload="auto" poster="assets/imgs/iot/azure-iot-hub.png" class="main-video"></video>
+            <h2 class="main-vid-title font-size-1em">Enviando datos a Azure IoT Hub</h2>
+        </div>
+
+        
+        <div class="video-list-container">
+            <div class="list vid10">
+                <video src="assets/videos/MCS_IOTRB_vid10.mp4" class="list-video"></video>
+                <h2 class="list-title">Enviando datos a Azure IoT Hub</h2>
+            </div>
+
+            <div class="list vid11">
+                <video src="assets/videos/MCS_IOTRB_vid11.mp4" class="list-video"></video>
+                <h2 class="list-title">Creando y Dockerizando la WebApp</h2>
+            </div>
+        </div>
+<!-- Contenido por video -->
+    <div class="container m-auto m-0 pt-5">
+
+        <div class="d-flex width-100 justify-content-around font-size-1-5em">
+            <a href="iotrb_course_tema3.html">Tema Anterior</a>
+            <a href="#" disabled>Tema Siguiente</a>
+        </div>
+
+        <div class="vid video-content vid10 width-100">
+            <h2 class="mb-3 text-center"></h2>
+        </div>
+
+        <div class="vid video-content vid11 width-100 display-none">
+            <h2 class="mb-3 text-center"></h2>
+        </div>
+
+    </div>
+    <footer>
+    </footer>
+</body>
+</html>
