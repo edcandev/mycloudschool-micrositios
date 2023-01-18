@@ -10070,7 +10070,7 @@ h3 {
 }
 
 #open-nav {
-  background-color: #1976D2;
+  background-color: #444444;
   color:#FFF;
   font-weight: bold;
   border-radius: 10px;
@@ -10079,7 +10079,7 @@ h3 {
   transition: .4s;
 }
 #open-nav:hover {
-  background-color: #1066C2;
+  background-color: #FF6600;
 }
 
 .podcast-cont {
