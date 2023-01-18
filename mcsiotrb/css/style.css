@@ -6,6 +6,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+  --blue-apple: #009CDF;
+  --green-apple: #5EBD3E;
+  --yellow-apple: #FFB900;
+  --orange-apple: #F78200;
+  --red-apple: #E23838;
+  --purple-apple: #973999;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -10050,10 +10056,11 @@ h3 {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #FF6600; /* Black*/
+  background-color: var(--orange-apple); /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px; /* Place content 60px from the top */
   transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+  box-shadow: 5px 0px 10px #444;
 }
 
 #close-nav {
@@ -10083,14 +10090,30 @@ h3 {
 }
 
 .podcast-cont {
-  margin-left: 5%;
+  margin-left: 10%;
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: max-content;
+  padding:15px;
+  background-color: var(--yellow-apple);
+  border-radius: 10px;
   color: #000;
 }
 
 audio {
   margin-bottom: 1em;
+}
+
+.slide-button {
+  border-style: none;
+  display: inline;
+  padding: 0px 20px;
+  font-size: 3em;
+  border-radius: 25px;
+}
+
+.slides-container {
+  margin-top: 25px;
+  box-shadow: 5px 5px 15px #000;
 }
